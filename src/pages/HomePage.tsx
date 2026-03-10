@@ -20,6 +20,7 @@ export default function HomePage() {
     removeSymbol,
     removeLastSymbol,
     clearSymbols,
+    reorderSymbols,
   } = useSymbols();
 
   const {
@@ -59,6 +60,7 @@ export default function HomePage() {
         onRemoveLast={removeLastSymbol}
         onClear={clearAndReset}
         onSpeak={handleSpeak}
+        onReorder={reorderSymbols}
         isSpeaking={isSpeaking}
       />
 

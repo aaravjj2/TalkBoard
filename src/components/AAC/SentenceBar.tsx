@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import type { SelectedSymbol } from '@/types';
 import { getCategoryColor } from '@/data/categories';
+import { useDragAndDrop } from '@/hooks/useDragAndDrop';
 
 interface SentenceBarProps {
   symbols: SelectedSymbol[];
@@ -9,6 +11,7 @@ interface SentenceBarProps {
   onRemoveLast: () => void;
   onClear: () => void;
   onSpeak: () => void;
+  onReorder?: (fromIndex: number, toIndex: number) => void;
   isSpeaking: boolean;
 }
 
@@ -20,8 +23,27 @@ export default function SentenceBar({
   onRemoveLast,
   onClear,
   onSpeak,
+  onReorder,
   isSpeaking,
 }: SentenceBarProps) {
+  const [dragFeedback, setDragFeedback] = useState<string | null>(null);
+
+  const { isDragging, containerProps, getItemProps, getKeyboardProps, dropTargetIndex } =
+    useDragAndDrop(
+      symbols.map((s) => ({ id: s.instanceId })),
+      {
+        onReorder: (from, to) => {
+          onReorder?.(from, to);
+          setDragFeedback(`Moved symbol from position ${from + 1} to ${to + 1}`);
+          setTimeout(() => setDragFeedback(null), 2000);
+        },
+        axis: 'horizontal',
+        enabled: !!onReorder && symbols.length > 1,
+        dragThreshold: 8,
+        hapticFeedback: true,
+        animationDuration: 200,
+      }
+    );
   return (
     <div
       className="sentence-bar bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-3"
@@ -29,12 +51,14 @@ export default function SentenceBar({
       aria-label="Selected symbols and generated sentence"
       data-testid="sentence-bar"
     >
-      {/* Symbol strip */}
+      {/* Symbol strip with drag-and-drop reordering */}
       <div className="flex items-center gap-2 mb-2 min-h-[3rem]">
         <div
-          className="flex-1 flex items-center gap-1.5 overflow-x-auto scrollbar-hide py-1"
-          role="list"
-          aria-label="Selected symbols"
+          {...containerProps}
+          className={`flex-1 flex items-center gap-1.5 overflow-x-auto scrollbar-hide py-1 ${
+            isDragging ? 'cursor-grabbing' : ''
+          }`}
+          aria-label="Selected symbols — drag to reorder"
           data-testid="symbol-strip"
         >
           {symbols.length === 0 ? (
@@ -42,18 +66,40 @@ export default function SentenceBar({
               Tap symbols below to build a sentence...
             </p>
           ) : (
-            symbols.map((sym) => {
+            symbols.map((sym, index) => {
               const catColor = getCategoryColor(sym.category);
+              const itemProps = getItemProps(sym.instanceId, index);
+              const kbProps = getKeyboardProps(sym.instanceId, index);
+              const isDropTarget =
+                isDragging && dropTargetIndex === index;
+
               return (
                 <button
                   key={sym.instanceId}
-                  onClick={() => onRemoveSymbol(sym.instanceId)}
-                  className="flex items-center gap-1 px-2 py-1 rounded-lg border text-sm
+                  {...itemProps}
+                  {...kbProps}
+                  onClick={
+                    isDragging
+                      ? undefined
+                      : () => onRemoveSymbol(sym.instanceId)
+                  }
+                  className={`flex items-center gap-1 px-2 py-1 rounded-lg border text-sm
                     hover:bg-red-50 dark:hover:bg-red-900/20 hover:border-red-300
-                    transition-colors duration-150 flex-shrink-0 group"
-                  style={{ borderColor: `${catColor}50` }}
-                  aria-label={`Remove ${sym.label}`}
-                  title={`Click to remove "${sym.label}"`}
+                    transition-colors duration-150 flex-shrink-0 group
+                    ${isDropTarget ? 'ring-2 ring-primary-400 ring-offset-1' : ''}
+                    ${itemProps.className}`}
+                  style={{
+                    ...itemProps.style,
+                    borderColor: `${catColor}50`,
+                  }}
+                  aria-label={`${sym.label} (position ${index + 1}). ${
+                    onReorder
+                      ? 'Drag to reorder, or press Enter then arrow keys. Click to remove.'
+                      : 'Click to remove.'
+                  }`}
+                  title={`"${sym.label}" — ${
+                    onReorder ? 'Drag to reorder, click to remove' : 'Click to remove'
+                  }`}
                   data-testid={`selected-symbol-${sym.instanceId}`}
                 >
                   <span className="text-lg" aria-hidden="true">
@@ -163,6 +209,13 @@ export default function SentenceBar({
               {isSpeaking ? 'Stop' : 'Speak'}
             </span>
           </button>
+        </div>
+      )}
+
+      {/* Screen reader announcement for drag operations */}
+      {dragFeedback && (
+        <div className="sr-only" role="status" aria-live="assertive">
+          {dragFeedback}
         </div>
       )}
     </div>

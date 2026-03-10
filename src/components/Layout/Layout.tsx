@@ -3,6 +3,7 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import ToastContainer from '@/components/common/ToastContainer';
 import Modal from '@/components/common/Modal';
+import { OfflineIndicator, InstallPrompt, UpdateNotification } from '@/components/PWA';
 import { useUIStore } from '@/stores/uiStore';
 
 export default function Layout() {
@@ -10,6 +11,7 @@ export default function Layout() {
 
   return (
     <div className="flex h-screen flex-col bg-gray-50 dark:bg-gray-900 overflow-hidden">
+      <OfflineIndicator />
       <Header />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar
@@ -26,6 +28,8 @@ export default function Layout() {
       </div>
       <ToastContainer />
       <Modal />
+      <InstallPrompt />
+      <UpdateNotification />
     </div>
   );
 }
