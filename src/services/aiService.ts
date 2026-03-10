@@ -132,7 +132,7 @@ function generateLocally(symbols: AACSymbol[]): AIResponse {
   };
 }
 
-function fallbackSentence(symbols: AACSymbol[]): string {
+export function fallbackSentence(symbols: AACSymbol[]): string {
   if (symbols.length === 0) return '';
   if (symbols.length === 1) return symbols[0].label;
 
