@@ -14,6 +14,7 @@ import HelpPage from '@/pages/HelpPage';
 import OnboardingPage from '@/pages/OnboardingPage';
 import ProfilePage from '@/pages/ProfilePage';
 import AnalyticsDashboardPage from '@/pages/AnalyticsDashboardPage';
+import SymbolEditorPage from '@/pages/SymbolEditorPage';
 
 export default function App() {
   const { settings, hasCompletedOnboarding } = useUserStore();
@@ -62,6 +63,7 @@ export default function App() {
             <Route path="/help" element={<HelpPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/analytics" element={<AnalyticsDashboardPage />} />
+            <Route path="/symbol-editor" element={<SymbolEditorPage />} />
           </Route>
         )}
       </Routes>
