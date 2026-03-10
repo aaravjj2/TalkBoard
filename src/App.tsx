@@ -13,6 +13,7 @@ import CaregiverPage from '@/pages/CaregiverPage';
 import HelpPage from '@/pages/HelpPage';
 import OnboardingPage from '@/pages/OnboardingPage';
 import ProfilePage from '@/pages/ProfilePage';
+import AnalyticsDashboardPage from '@/pages/AnalyticsDashboardPage';
 
 export default function App() {
   const { settings, hasCompletedOnboarding } = useUserStore();
@@ -60,6 +61,7 @@ export default function App() {
             <Route path="/caregiver" element={<CaregiverPage />} />
             <Route path="/help" element={<HelpPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/analytics" element={<AnalyticsDashboardPage />} />
           </Route>
         )}
       </Routes>
