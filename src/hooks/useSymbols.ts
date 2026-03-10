@@ -46,7 +46,7 @@ export function useSymbols() {
   );
 
   const getSymbolById = useCallback(
-    (id: string): AACSymbol | undefined => SYMBOL_MAP.get(id),
+    (id: string): AACSymbol | undefined => SYMBOL_MAP[id],
     []
   );
 

@@ -24,31 +24,25 @@ export interface SymbolCategory {
 export interface AACSymbol {
   id: string;
   label: string;
-  icon: string;
-  categoryId: SymbolCategoryId;
+  emoji: string;
+  category: SymbolCategoryId;
   keywords: string[];
   order: number;
-  isCustom: boolean;
-  createdAt: string;
-  updatedAt: string;
+  isCustom?: boolean;
 }
 
 // ─── Sentence & Phrase Types ─────────────────────────────────────────────────
 
-export interface SelectedSymbol {
+export interface SelectedSymbol extends AACSymbol {
   instanceId: string;
-  symbol: AACSymbol;
-  addedAt: number;
+  selectedAt: string;
 }
 
 export interface GeneratedSentence {
   id: string;
-  symbolIds: string[];
-  symbolLabels: string[];
-  rawInput: string;
-  generatedText: string;
-  timestamp: string;
-  spokenAt?: string;
+  symbols: { id: string; label: string; emoji: string }[];
+  sentence: string;
+  spokenAt: string;
   isFavorite: boolean;
 }
 
@@ -68,34 +62,27 @@ export interface QuickPhrase {
 export interface UserProfile {
   id: string;
   name: string;
-  avatarEmoji: string;
+  avatar: string;
   createdAt: string;
   updatedAt: string;
-  settings: UserSettings;
-  customSymbols: AACSymbol[];
-  hiddenSymbolIds: string[];
-  categoryOrder: SymbolCategoryId[];
 }
 
 export interface UserSettings {
   theme: 'light' | 'dark' | 'system';
   highContrast: boolean;
   fontSize: 'small' | 'medium' | 'large' | 'extra-large';
-  gridColumns: number;
+  gridSize: 'small' | 'medium' | 'large';
   showSymbolLabels: boolean;
-  showCategoryIcons: boolean;
-  voiceId: string;
+  selectedVoiceURI: string | null;
   voiceRate: number;
   voicePitch: number;
   voiceVolume: number;
   autoSpeak: boolean;
+  autoSaveQuickPhrases: boolean;
   soundEffects: boolean;
   hapticFeedback: boolean;
   animationsEnabled: boolean;
-  quickPhrasesCount: number;
-  maxHistoryItems: number;
-  caregiverModeEnabled: boolean;
-  caregiverPin: string;
+  caregiverPin: string | null;
   language: string;
 }
 
@@ -111,7 +98,6 @@ export interface AIResponse {
   sentence: string;
   confidence: number;
   alternatives: string[];
-  processingTimeMs: number;
 }
 
 export type AIStatus = 'idle' | 'loading' | 'success' | 'error';
@@ -119,7 +105,6 @@ export type AIStatus = 'idle' | 'loading' | 'success' | 'error';
 export interface AIError {
   code: string;
   message: string;
-  retryable: boolean;
 }
 
 // ─── TTS Types ───────────────────────────────────────────────────────────────
@@ -137,7 +122,14 @@ export type TTSStatus = 'idle' | 'speaking' | 'paused' | 'error';
 
 export type ViewMode = 'grid' | 'list';
 
-export type AppPage = 'home' | 'settings' | 'history' | 'caregiver' | 'help';
+export type AppPage =
+  | 'home'
+  | 'settings'
+  | 'history'
+  | 'quick-phrases'
+  | 'caregiver'
+  | 'help'
+  | 'profile';
 
 export interface Toast {
   id: string;

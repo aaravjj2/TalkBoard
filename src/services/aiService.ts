@@ -112,7 +112,7 @@ export async function generateSentenceWithRetry(
       lastError = err instanceof Error ? err : new Error(String(err));
       if (attempt < maxRetries) {
         await new Promise((resolve) =>
-          setTimeout(resolve, AI_CONFIG.retryDelay * (attempt + 1))
+          setTimeout(resolve, AI_CONFIG.retryDelayMs * (attempt + 1))
         );
       }
     }

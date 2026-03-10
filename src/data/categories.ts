@@ -83,6 +83,8 @@ export const SYMBOL_CATEGORIES: SymbolCategory[] = [
   },
 ];
 
+export const CATEGORIES = SYMBOL_CATEGORIES;
+
 export const CATEGORY_MAP: Record<SymbolCategoryId, SymbolCategory> =
   SYMBOL_CATEGORIES.reduce(
     (acc, cat) => {
