@@ -1,0 +1,36 @@
+import type { AACSymbol } from '@/types';
+
+const now = new Date().toISOString();
+
+export const DESCRIPTORS_SYMBOLS: AACSymbol[] = [
+  { id: 'desc-big', label: 'big', icon: '🐘', categoryId: 'descriptors', keywords: ['big', 'large', 'huge', 'enormous'], order: 0, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-small', label: 'small', icon: '🐜', categoryId: 'descriptors', keywords: ['small', 'little', 'tiny', 'mini'], order: 1, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-more', label: 'more', icon: '➕', categoryId: 'descriptors', keywords: ['more', 'additional', 'extra', 'another'], order: 2, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-less', label: 'less', icon: '➖', categoryId: 'descriptors', keywords: ['less', 'fewer', 'reduce'], order: 3, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-good', label: 'good', icon: '👍', categoryId: 'descriptors', keywords: ['good', 'nice', 'great', 'fine'], order: 4, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-bad', label: 'bad', icon: '👎', categoryId: 'descriptors', keywords: ['bad', 'awful', 'terrible', 'not good'], order: 5, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-new', label: 'new', icon: '✨', categoryId: 'descriptors', keywords: ['new', 'brand new', 'fresh'], order: 6, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-old', label: 'old', icon: '📜', categoryId: 'descriptors', keywords: ['old', 'ancient', 'worn'], order: 7, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-hot', label: 'hot', icon: '🔥', categoryId: 'descriptors', keywords: ['hot', 'warm', 'heated'], order: 8, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-cold', label: 'cold', icon: '❄️', categoryId: 'descriptors', keywords: ['cold', 'cool', 'freezing', 'icy'], order: 9, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-fast', label: 'fast', icon: '⚡', categoryId: 'descriptors', keywords: ['fast', 'quick', 'speedy', 'rapid'], order: 10, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-slow', label: 'slow', icon: '🐢', categoryId: 'descriptors', keywords: ['slow', 'unhurried', 'gradual'], order: 11, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-loud', label: 'loud', icon: '🔊', categoryId: 'descriptors', keywords: ['loud', 'noisy', 'volume up'], order: 12, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-quiet', label: 'quiet', icon: '🔇', categoryId: 'descriptors', keywords: ['quiet', 'silent', 'shhh', 'mute'], order: 13, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-clean', label: 'clean', icon: '✨', categoryId: 'descriptors', keywords: ['clean', 'tidy', 'neat'], order: 14, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-dirty', label: 'dirty', icon: '💩', categoryId: 'descriptors', keywords: ['dirty', 'messy', 'filthy'], order: 15, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-wet', label: 'wet', icon: '💦', categoryId: 'descriptors', keywords: ['wet', 'damp', 'soaked'], order: 16, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-dry', label: 'dry', icon: '🏜️', categoryId: 'descriptors', keywords: ['dry', 'arid', 'dried'], order: 17, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-soft', label: 'soft', icon: '🧸', categoryId: 'descriptors', keywords: ['soft', 'gentle', 'smooth'], order: 18, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-hard', label: 'hard', icon: '🪨', categoryId: 'descriptors', keywords: ['hard', 'firm', 'tough', 'difficult'], order: 19, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-pretty', label: 'pretty', icon: '🌸', categoryId: 'descriptors', keywords: ['pretty', 'beautiful', 'lovely'], order: 20, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-funny', label: 'funny', icon: '😂', categoryId: 'descriptors', keywords: ['funny', 'hilarious', 'humorous'], order: 21, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-scary', label: 'scary', icon: '👻', categoryId: 'descriptors', keywords: ['scary', 'frightening', 'creepy'], order: 22, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-favorite', label: 'favorite', icon: '⭐', categoryId: 'descriptors', keywords: ['favorite', 'best', 'preferred'], order: 23, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-different', label: 'different', icon: '🔀', categoryId: 'descriptors', keywords: ['different', 'other', 'another'], order: 24, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-same', label: 'same', icon: '🟰', categoryId: 'descriptors', keywords: ['same', 'equal', 'identical'], order: 25, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-all', label: 'all', icon: '🌐', categoryId: 'descriptors', keywords: ['all', 'every', 'everything'], order: 26, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-none', label: 'none', icon: '0️⃣', categoryId: 'descriptors', keywords: ['none', 'zero', 'nothing'], order: 27, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-very', label: 'very', icon: '💯', categoryId: 'descriptors', keywords: ['very', 'really', 'extremely', 'super'], order: 28, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'desc-not', label: 'not', icon: '🚫', categoryId: 'descriptors', keywords: ['not', 'no', 'dont', 'negative'], order: 29, isCustom: false, createdAt: now, updatedAt: now },
+];

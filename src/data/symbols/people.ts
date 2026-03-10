@@ -1,0 +1,36 @@
+import type { AACSymbol } from '@/types';
+
+const now = new Date().toISOString();
+
+export const PEOPLE_SYMBOLS: AACSymbol[] = [
+  { id: 'people-i', label: 'I', icon: '🙋', categoryId: 'people', keywords: ['me', 'myself', 'I'], order: 0, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-you', label: 'you', icon: '👉', categoryId: 'people', keywords: ['you', 'yourself'], order: 1, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-he', label: 'he', icon: '👦', categoryId: 'people', keywords: ['he', 'him', 'boy', 'man'], order: 2, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-she', label: 'she', icon: '👧', categoryId: 'people', keywords: ['she', 'her', 'girl', 'woman'], order: 3, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-we', label: 'we', icon: '👫', categoryId: 'people', keywords: ['we', 'us', 'together'], order: 4, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-they', label: 'they', icon: '👥', categoryId: 'people', keywords: ['they', 'them', 'those people'], order: 5, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-mom', label: 'mom', icon: '👩', categoryId: 'people', keywords: ['mom', 'mother', 'mama', 'mommy'], order: 6, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-dad', label: 'dad', icon: '👨', categoryId: 'people', keywords: ['dad', 'father', 'papa', 'daddy'], order: 7, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-brother', label: 'brother', icon: '👦', categoryId: 'people', keywords: ['brother', 'bro', 'sibling'], order: 8, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-sister', label: 'sister', icon: '👧', categoryId: 'people', keywords: ['sister', 'sis', 'sibling'], order: 9, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-baby', label: 'baby', icon: '👶', categoryId: 'people', keywords: ['baby', 'infant', 'little one'], order: 10, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-grandma', label: 'grandma', icon: '👵', categoryId: 'people', keywords: ['grandma', 'grandmother', 'nana', 'granny'], order: 11, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-grandpa', label: 'grandpa', icon: '👴', categoryId: 'people', keywords: ['grandpa', 'grandfather', 'papa', 'gramps'], order: 12, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-friend', label: 'friend', icon: '🤝', categoryId: 'people', keywords: ['friend', 'buddy', 'pal'], order: 13, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-teacher', label: 'teacher', icon: '👩‍🏫', categoryId: 'people', keywords: ['teacher', 'instructor', 'educator'], order: 14, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-doctor', label: 'doctor', icon: '👨‍⚕️', categoryId: 'people', keywords: ['doctor', 'physician', 'dr'], order: 15, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-therapist', label: 'therapist', icon: '🧑‍⚕️', categoryId: 'people', keywords: ['therapist', 'counselor', 'helper'], order: 16, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-nurse', label: 'nurse', icon: '👩‍⚕️', categoryId: 'people', keywords: ['nurse', 'caretaker'], order: 17, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-classmate', label: 'classmate', icon: '🧑‍🎓', categoryId: 'people', keywords: ['classmate', 'student', 'peer'], order: 18, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-pet', label: 'pet', icon: '🐕', categoryId: 'people', keywords: ['pet', 'animal', 'dog', 'cat'], order: 19, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-someone', label: 'someone', icon: '🧑', categoryId: 'people', keywords: ['someone', 'somebody', 'person'], order: 20, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-everyone', label: 'everyone', icon: '👪', categoryId: 'people', keywords: ['everyone', 'everybody', 'all'], order: 21, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-nobody', label: 'nobody', icon: '🚫', categoryId: 'people', keywords: ['nobody', 'no one', 'none'], order: 22, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-my', label: 'my', icon: '☝️', categoryId: 'people', keywords: ['my', 'mine', 'belonging to me'], order: 23, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-your', label: 'your', icon: '👆', categoryId: 'people', keywords: ['your', 'yours'], order: 24, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-aunt', label: 'aunt', icon: '👩', categoryId: 'people', keywords: ['aunt', 'auntie'], order: 25, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-uncle', label: 'uncle', icon: '👨', categoryId: 'people', keywords: ['uncle'], order: 26, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-cousin', label: 'cousin', icon: '🧒', categoryId: 'people', keywords: ['cousin', 'relative'], order: 27, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-neighbor', label: 'neighbor', icon: '🏘️', categoryId: 'people', keywords: ['neighbor', 'next door'], order: 28, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'people-helper', label: 'helper', icon: '🤲', categoryId: 'people', keywords: ['helper', 'aide', 'assistant'], order: 29, isCustom: false, createdAt: now, updatedAt: now },
+];

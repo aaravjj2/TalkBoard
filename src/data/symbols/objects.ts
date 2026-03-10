@@ -1,0 +1,36 @@
+import type { AACSymbol } from '@/types';
+
+const now = new Date().toISOString();
+
+export const OBJECTS_SYMBOLS: AACSymbol[] = [
+  { id: 'objects-phone', label: 'phone', icon: '📱', categoryId: 'objects', keywords: ['phone', 'cell', 'mobile', 'call'], order: 0, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-tablet', label: 'tablet', icon: '📱', categoryId: 'objects', keywords: ['tablet', 'ipad', 'device'], order: 1, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-computer', label: 'computer', icon: '💻', categoryId: 'objects', keywords: ['computer', 'laptop', 'pc'], order: 2, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-tv', label: 'TV', icon: '📺', categoryId: 'objects', keywords: ['tv', 'television', 'screen'], order: 3, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-book', label: 'book', icon: '📕', categoryId: 'objects', keywords: ['book', 'reading', 'story'], order: 4, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-toy', label: 'toy', icon: '🧸', categoryId: 'objects', keywords: ['toy', 'stuffed animal', 'teddy'], order: 5, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-ball', label: 'ball', icon: '⚽', categoryId: 'objects', keywords: ['ball', 'soccer', 'sports'], order: 6, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-blanket', label: 'blanket', icon: '🧶', categoryId: 'objects', keywords: ['blanket', 'cover', 'warm'], order: 7, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-cup', label: 'cup', icon: '🥤', categoryId: 'objects', keywords: ['cup', 'glass', 'mug', 'drink container'], order: 8, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-plate', label: 'plate', icon: '🍽️', categoryId: 'objects', keywords: ['plate', 'dish'], order: 9, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-spoon', label: 'spoon', icon: '🥄', categoryId: 'objects', keywords: ['spoon', 'utensil', 'silverware'], order: 10, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-shoes', label: 'shoes', icon: '👟', categoryId: 'objects', keywords: ['shoes', 'sneakers', 'footwear'], order: 11, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-hat', label: 'hat', icon: '🧢', categoryId: 'objects', keywords: ['hat', 'cap', 'headwear'], order: 12, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-coat', label: 'coat', icon: '🧥', categoryId: 'objects', keywords: ['coat', 'jacket', 'outerwear'], order: 13, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-backpack', label: 'backpack', icon: '🎒', categoryId: 'objects', keywords: ['backpack', 'bag', 'school bag'], order: 14, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-pencil', label: 'pencil', icon: '✏️', categoryId: 'objects', keywords: ['pencil', 'pen', 'crayon', 'writing tool'], order: 15, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-scissors', label: 'scissors', icon: '✂️', categoryId: 'objects', keywords: ['scissors', 'cut'], order: 16, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-paper', label: 'paper', icon: '📄', categoryId: 'objects', keywords: ['paper', 'sheet', 'page'], order: 17, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-key', label: 'key', icon: '🔑', categoryId: 'objects', keywords: ['key', 'unlock', 'lock'], order: 18, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-door', label: 'door', icon: '🚪', categoryId: 'objects', keywords: ['door', 'entrance', 'exit'], order: 19, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-light', label: 'light', icon: '💡', categoryId: 'objects', keywords: ['light', 'lamp', 'bulb'], order: 20, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-clock', label: 'clock', icon: '🕐', categoryId: 'objects', keywords: ['clock', 'time', 'watch'], order: 21, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-medicine', label: 'medicine', icon: '💊', categoryId: 'objects', keywords: ['medicine', 'pill', 'medication'], order: 22, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-toothbrush', label: 'toothbrush', icon: '🪥', categoryId: 'objects', keywords: ['toothbrush', 'brush', 'dental'], order: 23, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-towel', label: 'towel', icon: '🧻', categoryId: 'objects', keywords: ['towel', 'dry', 'wipe'], order: 24, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-pillow', label: 'pillow', icon: '🛏️', categoryId: 'objects', keywords: ['pillow', 'cushion', 'headrest'], order: 25, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-wheelchair', label: 'wheelchair', icon: '🦽', categoryId: 'objects', keywords: ['wheelchair', 'chair', 'mobility'], order: 26, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-glasses', label: 'glasses', icon: '👓', categoryId: 'objects', keywords: ['glasses', 'spectacles', 'eyewear'], order: 27, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-headphones', label: 'headphones', icon: '🎧', categoryId: 'objects', keywords: ['headphones', 'earbuds', 'earphones'], order: 28, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'objects-camera', label: 'camera', icon: '📷', categoryId: 'objects', keywords: ['camera', 'photo', 'picture'], order: 29, isCustom: false, createdAt: now, updatedAt: now },
+];

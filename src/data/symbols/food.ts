@@ -1,0 +1,36 @@
+import type { AACSymbol } from '@/types';
+
+const now = new Date().toISOString();
+
+export const FOOD_SYMBOLS: AACSymbol[] = [
+  { id: 'food-water', label: 'water', icon: '💧', categoryId: 'food', keywords: ['water', 'drink', 'thirsty'], order: 0, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-milk', label: 'milk', icon: '🥛', categoryId: 'food', keywords: ['milk', 'dairy', 'drink'], order: 1, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-juice', label: 'juice', icon: '🧃', categoryId: 'food', keywords: ['juice', 'drink', 'fruit'], order: 2, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-apple', label: 'apple', icon: '🍎', categoryId: 'food', keywords: ['apple', 'fruit'], order: 3, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-banana', label: 'banana', icon: '🍌', categoryId: 'food', keywords: ['banana', 'fruit'], order: 4, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-bread', label: 'bread', icon: '🍞', categoryId: 'food', keywords: ['bread', 'toast', 'sandwich'], order: 5, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-pizza', label: 'pizza', icon: '🍕', categoryId: 'food', keywords: ['pizza', 'pie'], order: 6, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-chicken', label: 'chicken', icon: '🍗', categoryId: 'food', keywords: ['chicken', 'meat', 'poultry'], order: 7, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-rice', label: 'rice', icon: '🍚', categoryId: 'food', keywords: ['rice', 'grain'], order: 8, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-pasta', label: 'pasta', icon: '🍝', categoryId: 'food', keywords: ['pasta', 'noodles', 'spaghetti'], order: 9, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-egg', label: 'egg', icon: '🥚', categoryId: 'food', keywords: ['egg', 'eggs'], order: 10, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-cheese', label: 'cheese', icon: '🧀', categoryId: 'food', keywords: ['cheese', 'dairy'], order: 11, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-cereal', label: 'cereal', icon: '🥣', categoryId: 'food', keywords: ['cereal', 'breakfast', 'bowl'], order: 12, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-soup', label: 'soup', icon: '🍲', categoryId: 'food', keywords: ['soup', 'broth', 'stew'], order: 13, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-cookie', label: 'cookie', icon: '🍪', categoryId: 'food', keywords: ['cookie', 'biscuit', 'snack', 'treat'], order: 14, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-cake', label: 'cake', icon: '🎂', categoryId: 'food', keywords: ['cake', 'dessert', 'birthday'], order: 15, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-ice-cream', label: 'ice cream', icon: '🍦', categoryId: 'food', keywords: ['ice cream', 'frozen', 'dessert', 'treat'], order: 16, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-candy', label: 'candy', icon: '🍬', categoryId: 'food', keywords: ['candy', 'sweet', 'treat', 'sugar'], order: 17, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-fruit', label: 'fruit', icon: '🍇', categoryId: 'food', keywords: ['fruit', 'grapes', 'berries'], order: 18, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-vegetable', label: 'vegetable', icon: '🥦', categoryId: 'food', keywords: ['vegetable', 'veggie', 'broccoli', 'healthy'], order: 19, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-sandwich', label: 'sandwich', icon: '🥪', categoryId: 'food', keywords: ['sandwich', 'sub', 'lunch'], order: 20, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-hot-dog', label: 'hot dog', icon: '🌭', categoryId: 'food', keywords: ['hot dog', 'sausage', 'frank'], order: 21, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-hamburger', label: 'hamburger', icon: '🍔', categoryId: 'food', keywords: ['hamburger', 'burger', 'beef'], order: 22, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-fries', label: 'fries', icon: '🍟', categoryId: 'food', keywords: ['fries', 'french fries', 'chips'], order: 23, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-snack', label: 'snack', icon: '🥨', categoryId: 'food', keywords: ['snack', 'pretzel', 'munchie'], order: 24, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-breakfast', label: 'breakfast', icon: '🥞', categoryId: 'food', keywords: ['breakfast', 'morning', 'pancake'], order: 25, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-lunch', label: 'lunch', icon: '🥙', categoryId: 'food', keywords: ['lunch', 'midday', 'noon meal'], order: 26, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-dinner', label: 'dinner', icon: '🥘', categoryId: 'food', keywords: ['dinner', 'supper', 'evening meal'], order: 27, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-more', label: 'more food', icon: '➕', categoryId: 'food', keywords: ['more', 'another', 'again', 'extra'], order: 28, isCustom: false, createdAt: now, updatedAt: now },
+  { id: 'food-all-done', label: 'all done', icon: '✅', categoryId: 'food', keywords: ['done', 'finished', 'full', 'enough'], order: 29, isCustom: false, createdAt: now, updatedAt: now },
+];
