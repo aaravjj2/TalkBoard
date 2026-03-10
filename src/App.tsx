@@ -49,18 +49,19 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {!hasCompletedOnboarding && (
+        {!hasCompletedOnboarding ? (
           <Route path="*" element={<OnboardingPage />} />
+        ) : (
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/settings" element={<SettingsPage />} />
+            <Route path="/history" element={<HistoryPage />} />
+            <Route path="/quick-phrases" element={<QuickPhrasesPage />} />
+            <Route path="/caregiver" element={<CaregiverPage />} />
+            <Route path="/help" element={<HelpPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+          </Route>
         )}
-        <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/settings" element={<SettingsPage />} />
-          <Route path="/history" element={<HistoryPage />} />
-          <Route path="/quick-phrases" element={<QuickPhrasesPage />} />
-          <Route path="/caregiver" element={<CaregiverPage />} />
-          <Route path="/help" element={<HelpPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-        </Route>
       </Routes>
     </BrowserRouter>
   );
